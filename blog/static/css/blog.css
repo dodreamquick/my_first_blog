@@ -1,0 +1,101 @@
+
+.app-container {
+    padding: 48px 10%;
+}
+
+
+.post-item {
+    color : #e9ca9f;
+    font-weight : lighter;
+    margin : 24px 0 24px 0;
+    border-bottom : 1px solid #887d6e;
+    padding-bottom : 24px;
+    height : 140px;
+    
+}
+
+.post-item .title a{
+    color : #e9ca9f;
+    font-size : 24px;
+    font-weight : normal;
+}
+
+.post-item .title a:hover {
+    color : #ffd152;
+    text-decoration : none;
+}
+
+.post-detail {
+    color : #e9ca9f;
+}
+.post-detail .sub-title {
+    font-size : 18px;
+    font-weight : lighter ;
+}
+.post-detail .body {
+    color : #e9ca9f;
+    font-weight : lighter ;
+    margin-top : 24px;
+    min-height : 1024px;
+    padding : 20px;
+    border-top-style : solid;
+    border-bottom-style : solid ;
+    border-color : #837761;
+    border-width : 1px;
+    word-break : keep-all;
+}
+
+.auth-form {
+    text-align : center;
+}
+.auth-form .title {
+    font-size : 24px;
+    font-weight : lighter;
+    color : #e9ca9f;
+    padding-bottom : 24px;
+}
+}
+.auth-form .form-container {
+    margin : 30px 0 24px 0;
+}
+
+.auth-form .form-container .text-form  {
+    color : #e9ca9f;
+    border-radius: 100px;
+    border : 1px solid gray;
+    padding : 4px;
+    text-align : center;
+    background-color : #e9ca9f;
+    margin-bottom : 18px;
+    width : 280px;
+    height : 40px;
+}
+
+.auth-form .button {
+    margin-top : 10px;
+    color : #343334;
+    font-weight : bold;
+    border-radius: 100px;
+    border : 1px solid #343334;
+    padding : 4px;
+    text-align : center;
+    background-color : #ffd152;
+    margin-bottom : 18px;
+    width : 280px;
+    height : 40px;
+}
+
+.auth-form .button:hover,
+.auth-form .button:active{
+    transition-property: letter-spacing, background-color, box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    letter-spacing: 5px;
+    background-color : #ffc31f;
+    box-shadow: inset 2px 2px 10px #d36e2d;
+}
+
+
+.navbar {
+    padding : 12px 10%;
+}

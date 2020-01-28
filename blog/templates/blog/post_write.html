@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+    <form method="POST">{% csrf_token %} <!--장고에서는 form 쓸 때 이걸 꼭 달아줘야 함-->
+        <div>
+            <label for="title">글 제목</label> <!--이 title이라는 id를 가진 아이의 label-->
+             <input id="title" type="text" name="title" placeholder="Title"/>
+        </div>
+       
+        <div>
+            <label for="text">글 본문</label>
+             <input id="text" type="text" name="text" placeholder="Text"/>
+        </div>
+       
+        <div>
+            <input type="submit" value="저장" />
+        </div>
+        
+        
+    </form>
+{% endblock %}

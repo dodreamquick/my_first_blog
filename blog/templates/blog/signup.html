@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+    <form class="auth-form" method="POST">
+        {% csrf_token %}
+        <div class="title">
+            회원가입하세요
+        </div>
+        <div>
+            
+        
+            <div class="form-container">
+            
+                 <input class="text-form" id="username" type="text" name="username" placeholder="Title"/>
+            <div>
+                
+            </div>
+                 <input class="text-form" id="password" type="password" name="password" placeholder="Text"/>
+            </div>
+        </div>
+       
+         <div>
+            <input class="button" type="submit" value="회원가입" />
+         </div>
+
+    </form>
+{% endblock %}
