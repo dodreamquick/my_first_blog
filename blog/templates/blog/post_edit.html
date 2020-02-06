@@ -4,12 +4,12 @@
     <form id="post-form" method="POST">{% csrf_token %} <!--장고에서는 form 쓸 때 이걸 꼭 달아줘야 함-->
         <div>
             <label for="title">글 제목</label> <!--이 title이라는 id를 가진 아이의 label-->
-             <input id="title" type="text" name="title" placeholder="Title"/>
+             <input id="title" type="text" name="title" placeholder="Title" value="{{post.Title}}"/>
         </div>
        
         <div>
             <label for="text">글 본문</label>
-             <input id="text" type="text" name="text" placeholder="Text"/>
+             <input id="text" type="text" name="text" placeholder="Text" value="{{post.text}}"/>
         </div>
        
         <div>
@@ -24,7 +24,7 @@
     <script>
         shortcuts["s"]= function (e) {
             e.preventDefault();
-            document.getElementById("post-form").submit();
+            document.getElementById("post-form").submit(); //위에 있는 form에서 submit을 누른다. 
         }
     </script>
 {% endblock %}

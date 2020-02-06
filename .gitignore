@@ -1,6 +1,7 @@
 my_first_blog/.config_secret
 
-
+manage.py
+blog/migrations
 
 # Created by https://www.gitignore.io/api/python,django
 

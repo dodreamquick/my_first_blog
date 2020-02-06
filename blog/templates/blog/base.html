@@ -35,7 +35,13 @@
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="/">Home </a>
+                
               </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item activate">
+                <a class="nav-link" href="/post/write">Write </a>
+              </li>
+              {% endif %}
             </ul>
           </div>    
 
@@ -64,10 +70,10 @@
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="/user/login">Log In </a>
-              </li>
+                </li>
             
-              <li class="nav-item active">
-                <a class="nav-link" href="/user/signup">Sign Up </a>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/user/signup">Sign Up </a>
               </li>
             </ul>
           </div>
@@ -82,5 +88,36 @@
             {% endblock %}
             <!--이 부분만  바뀔꺼다-->
         </div>
+        
+        <script>
+        window.addEventListener("keydown", control_down); //event가 생길 때에만 함수가 호출되게끔
+        window.addEventListener("keyup", control_up); //control_up는 우리가 등록할 함수 
+        
+        const shortcuts = {} ;
+            
+        function control_down(event) {
+            if (event.key === "Control") {
+                window.addEventListener("keydown", key_down);
+                
+            }
+        }
+        
+        function control_up(event) {
+            if (event.key === "Control") {
+                window.removeEventListener("keydown", key_down);
+            }
+        }
+        
+        function key_down(event) {
+            //shortcuts에 event.key가 있으면 if 문이 실행이 됨
+            if (shortcuts[event.key]) {
+                event.preventDefault();
+                shortcuts[event.key](event);
+            }
+
+        }
+    </script>
+        {% block script %}
+        {% endblock %}
     </body>
 </html>

@@ -1,4 +1,4 @@
-{% extends 'blog/base.html' %}
+ {% extends 'blog/base.html' %}
 
 {% block body %}
     <div class="post-detail">
@@ -12,4 +12,18 @@
             {{post_detail.text}}
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        shortcuts["e"]=function (e) {
+            e.preventDefault();
+            const post_id = {{post_detail.id}}
+            document.location.href="/post/" + post_id + "/edit/";
+            //document 안에서의 추가 path 지정. edit로 이동하게끔
+            // console.log(e); //개발자 console에 뜨게끔
+            
+            //event에 e가 들어감
+        }
+    </script>
 {% endblock %}

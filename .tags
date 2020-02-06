@@ -1,0 +1,72 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	my_first_blog/settings/debug.py	/^ALLOWED_HOSTS = config_secret_debug["django"]["allowed_hosts"]$/;"	v	line:9
+ALLOWED_HOSTS	my_first_blog/settings/deploy.py	/^ALLOWED_HOSTS = config_secret_deploy["django"]["allowed_hosts"]$/;"	v	line:9
+AUTH_PASSWORD_VALIDATORS	my_first_blog/settings/base.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v	line:77
+BASE_DIR	my_first_blog/settings/base.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v	line:11
+BlogConfig	blog/apps.py	/^class BlogConfig(AppConfig):$/;"	c	line:4
+CONFIG_SECRET_COMMON_FILE	my_first_blog/settings/base.py	/^CONFIG_SECRET_COMMON_FILE=os.path.join(CONFIG_SECRET_DIR, "settings_common.json")$/;"	v	line:15
+CONFIG_SECRET_DEBUG_FILE	my_first_blog/settings/base.py	/^CONFIG_SECRET_DEBUG_FILE=os.path.join(CONFIG_SECRET_DIR, "settings_debug.json")$/;"	v	line:16
+CONFIG_SECRET_DEPLOY_FILE	my_first_blog/settings/base.py	/^CONFIG_SECRET_DEPLOY_FILE=os.path.join(CONFIG_SECRET_DIR, "settings_deploy.json")$/;"	v	line:17
+CONFIG_SECRET_DIR	my_first_blog/settings/base.py	/^CONFIG_SECRET_DIR = os.path.join(BASE_DIR, ".config_secret")$/;"	v	line:14
+DATABASES	my_first_blog/settings/debug.py	/^DATABASES = {$/;"	v	line:14
+DATABASES	my_first_blog/settings/deploy.py	/^DATABASES = {$/;"	v	line:14
+DEBUG	my_first_blog/settings/debug.py	/^DEBUG=True$/;"	v	line:7
+DEBUG	my_first_blog/settings/deploy.py	/^DEBUG = False$/;"	v	line:7
+INSTALLED_APPS	my_first_blog/settings/base.py	/^INSTALLED_APPS = [$/;"	v	line:32
+LANGUAGE_CODE	my_first_blog/settings/base.py	/^LANGUAGE_CODE = 'en-us'$/;"	v	line:96
+MIDDLEWARE	my_first_blog/settings/base.py	/^MIDDLEWARE = [$/;"	v	line:43
+Migration	blog/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c	line:9
+Post	blog/models.py	/^class Post(models.Model):$/;"	c	line:5
+ROOT_DIR	my_first_blog/settings/base.py	/^ROOT_DIR = os.path.dirname(BASE_DIR)$/;"	v	line:12
+ROOT_URLCONF	my_first_blog/settings/base.py	/^ROOT_URLCONF = 'my_first_blog.urls'$/;"	v	line:53
+SECRET_KEY	my_first_blog/settings/base.py	/^SECRET_KEY = config_secret_common["django"]["secret_key"]$/;"	v	line:27
+STATICFILES_DIRS	my_first_blog/settings/base.py	/^STATICFILES_DIRS= [$/;"	v	line:112
+STATIC_DIR	my_first_blog/settings/base.py	/^STATIC_DIR = os.path.join(BASE_DIR,'static')$/;"	v	line:111
+STATIC_ROOT	my_first_blog/settings/base.py	/^STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')$/;"	v	line:115
+STATIC_URL	my_first_blog/settings/base.py	/^STATIC_URL = '\/static\/'$/;"	v	line:110
+TEMPLATES	my_first_blog/settings/base.py	/^TEMPLATES = [$/;"	v	line:55
+TIME_ZONE	my_first_blog/settings/base.py	/^TIME_ZONE = 'Asia\/Seoul'$/;"	v	line:98
+USE_I18N	my_first_blog/settings/base.py	/^USE_I18N = True$/;"	v	line:100
+USE_L10N	my_first_blog/settings/base.py	/^USE_L10N = True$/;"	v	line:102
+USE_TZ	my_first_blog/settings/base.py	/^USE_TZ = True$/;"	v	line:104
+WSGI_APPLICATION	my_first_blog/settings/debug.py	/^WSGI_APPLICATION = 'my_first_blog.wsgi.debug.application'$/;"	v	line:11
+WSGI_APPLICATION	my_first_blog/settings/deploy.py	/^WSGI_APPLICATION = 'my_first_blog.wsgi.deploy.application'$/;"	v	line:12
+__str__	blog/models.py	/^    def __str__(self):$/;"	m	line:29	class:Post	file:
+application	my_first_blog/asgi.py	/^application = get_asgi_application()$/;"	v	line:16
+application	my_first_blog/wsgi/debug.py	/^application = get_wsgi_application()$/;"	v	line:16
+application	my_first_blog/wsgi/deploy.py	/^application = get_wsgi_application()$/;"	v	line:16
+author	blog/models.py	/^    author=models.ForeignKey($/;"	v	line:7	class:Post
+blank	blog/models.py	/^        blank=True,$/;"	v	line:23	class:Post
+config_secret_common	my_first_blog/settings/base.py	/^config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())$/;"	v	line:19
+config_secret_debug	my_first_blog/settings/debug.py	/^config_secret_debug =  json.loads(open(CONFIG_SECRET_DEBUG_FILE).read())$/;"	v	line:4
+config_secret_deploy	my_first_blog/settings/deploy.py	/^config_secret_deploy = json.loads(open(CONFIG_SECRET_DEPLOY_FILE).read())$/;"	v	line:4
+created_date	blog/models.py	/^    created_date=models.DateTimeField($/;"	v	line:16	class:Post
+default	blog/models.py	/^        default=None,$/;"	v	line:21	class:Post
+default	blog/models.py	/^        default=timezone.now$/;"	v	line:17	class:Post
+dependencies	blog/migrations/0001_initial.py	/^    dependencies = [$/;"	v	line:13	class:Migration
+fields	blog/migrations/0001_initial.py	/^            fields=[$/;"	v	line:20	class:Migration
+initial	blog/migrations/0001_initial.py	/^    initial = True$/;"	v	line:11	class:Migration
+main	manage.py	/^def main():$/;"	f	line:7
+name	blog/apps.py	/^    name = 'blog'$/;"	v	line:5	class:BlogConfig
+name	blog/migrations/0001_initial.py	/^            name='Post',$/;"	v	line:19	class:Migration
+null	blog/models.py	/^        null=True,$/;"	v	line:22	class:Post
+on_delete	blog/models.py	/^        on_delete=models.CASCADE # 필수$/;"	v	line:9	class:Post
+operations	blog/migrations/0001_initial.py	/^    operations = [$/;"	v	line:17	class:Migration
+post_detail	blog/views.py	/^def post_detail(request,pk) :$/;"	f	line:14
+post_edit	blog/views.py	/^def post_edit(request,pk):$/;"	f	line:69
+post_list	blog/views.py	/^def post_list(request):$/;"	f	line:7
+post_write	blog/views.py	/^def post_write(request):$/;"	f	line:19
+publish	blog/models.py	/^    def publish(self) :$/;"	m	line:26	class:Post
+published_date	blog/models.py	/^    published_date = models.DateTimeField($/;"	v	line:20	class:Post
+text	blog/models.py	/^    text = models.TextField()$/;"	v	line:14	class:Post
+title	blog/models.py	/^    title = models.CharField(max_length=200)$/;"	v	line:12	class:Post
+urlpatterns	blog/urls.py	/^urlpatterns = [$/;"	v	line:5
+urlpatterns	my_first_blog/urls.py	/^urlpatterns = [$/;"	v	line:4
+user_login	blog/views.py	/^def user_login(request):$/;"	f	line:35
+user_logout	blog/views.py	/^def user_logout(request):$/;"	f	line:47
+user_signup	blog/views.py	/^def user_signup(request):$/;"	f	line:52
