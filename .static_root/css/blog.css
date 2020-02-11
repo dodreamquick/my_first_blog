@@ -1,4 +1,26 @@
 
+.sidebar {
+    height: 100%;
+    width : 0px;
+    position: fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    padding-top: 60px;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+.sidebar a {
+    padding: 12px 32px;
+    text-decoration : none;
+    font-size:18px;
+    display: block;
+    color : #818181;
+}
+
 .app-container {
     padding: 48px 10%;
 }
@@ -85,8 +107,7 @@
     height : 40px;
 }
 
-.auth-form .button:hover,
-.auth-form .button:active{
+.auth-form .button:hover, .auth-form .button:active {
     transition-property: letter-spacing, background-color, box-shadow;
     transition-duration: 500ms;
     transition-timing-function: ease-out;
@@ -95,7 +116,41 @@
     box-shadow: inset 2px 2px 10px #d36e2d;
 }
 
-
 .navbar {
     padding : 12px 10%;
+}
+
+textarea {
+    border: none ;
+    border-top : 1px solid lightgrey;
+    overflow: hidden;
+    padding: 12px 0;
+    outline: none;
+    width:100%;
+    margin-bottom: 24px;
+}
+
+#post-form .title {
+    border : none;
+    font-size : 32px;
+    font-weight : bold;
+    margin-bottom : 12px;
+    
+}
+
+#post-form .title:focus, .category:focus {
+    outline: none;
+}
+
+#post-form .category {
+    background-color:white;
+    border : none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    margin-bottom: 24px;
+}
+
+
+#post-form .button {
+    
 }

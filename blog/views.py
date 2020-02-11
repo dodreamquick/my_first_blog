@@ -1,14 +1,15 @@
 from django.utils import timezone
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import Post
+from .models import Post,Category
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+
 
 def post_list(request):
     post_list=Post.objects.all().order_by('-id')
     
     return render(request, "blog/post_list.html", 
-                  {"post_list" : post_list} 
+                  {"post_list" : post_list} #post_list.html에서 쓰일 데이터
     )
 
 def post_detail(request,pk) :
@@ -21,16 +22,22 @@ def post_write(request):
         form_data=request.POST #딕셔너리로 들어옴
         #이제 저장해보자. 
         if form_data["title"] !="" and form_data["text"] is not None:
+            if form_data["category"] != "":
+                category=Category.objects.get(id=form_data["category"])
+            else : 
+                category=None
             post=Post.objects.create(
                 title=form_data["title"],
                 text=form_data["text"],
+                category=category, #위에서 선언한 변수
                 author=request.user, #로그인 된 유저를 자동반환해줌
                 published_date=timezone.now(),
             )
             
             return redirect('post_detail',pk=post.id)
             
-    return render(request,"blog/post_write.html")
+    categories= Category.objects.all()
+    return render(request,"blog/post_edit.html", {"categories" : categories})
 
 def user_login(request):
     if request.method == "POST":
@@ -71,11 +78,21 @@ def post_edit(request,pk):
     if request.method=="POST":
         title=request.POST["title"]
         text=request.POST["text"]
+        category_id = request.POST["category"]
         
+        if category_id !="":
+            category = Category.objects.get(id=category_id)
+        else :
+            category= None
+            
         post.title=title
         post.text=text
-        
+        post.category=category
         post.save() # 포스트에 저장
         return redirect("post_detail", pk=post.id) 
-    
-    return render(request, "blog/post_edit.html", {"post" : post})
+    categories= Category.objects.all()
+    return render(request, "blog/post_edit.html", {"post" : post, "categories" : categories})
+
+def add_params_to_context(request):
+    categories = Category.objects.all()
+    return {"categories" : categories}

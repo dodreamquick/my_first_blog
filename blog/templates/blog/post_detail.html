@@ -5,17 +5,34 @@
         <h1>
             {{post_detail.title}}
         </h1>
+            
         <div class="sub-title">  
-            Published at: {{post_detail.published_date}}
+            {{post_detail.category}} | Published at: {{post_detail.published_date}}
         </div>
-        <div class="body">
-            {{post_detail.text}}
-        </div>
+        <div id="body" class="body">{{post_detail.text}}</div>
     </div>
 {% endblock %}
 
 {% block script %}
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
+        //마크다운 
+        const body = document.getElementById("body");
+        const innerHTML = body.innerHTML;
+        
+        body.innerHTML = innerHTML.replace(
+            //화살표 구현
+            /--&gt;/gi, "&rightarrow;"
+        ).replace(
+            //빈 줄 띄워주기
+            /^(\r\n|\r|\s*)$/gm, "&nbsp;\n"
+        ).replace(
+            //문단의 끝 띄워주기
+            /$/gm,"  "
+        );
+        
+        body.innerHTML = marked(body.innerHTML);
+        
         shortcuts["e"]=function (e) {
             e.preventDefault();
             const post_id = {{post_detail.id}}

@@ -7,10 +7,10 @@
 .post-item {
     color : #e9ca9f;
     font-weight : lighter;
-    margin : 24px 0 24px 0;
+    margin : 10px 0 10px 0;
     border-bottom : 1px solid #887d6e;
-    padding-bottom : 24px;
-    height : 140px;
+    padding-bottom : 20px;
+    height : 100px;
     
 }
 
@@ -44,6 +44,7 @@
     border-width : 1px;
     word-break : keep-all;
 }
+
 
 .auth-form {
     text-align : center;
