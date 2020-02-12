@@ -84,23 +84,9 @@
            
         </nav>
         
-        <div id="sidebar" class="sidebar" style="height: 100%;
-    width:0px;
-    position: fixed;
-    z-index:1;
-    top:0;
-    left:0;
-    padding-top: 60px;
-    background-color: black;
-    overflow-x: hidden;
-    transition: 0.5s;
-    white-space: nowrap;">
+        <div id="sidebar" class="sidebar">
             {% for category in categories %}
-                <a href="" style="padding: 12px 32px;
-    text-decoration : none;
-    font-size:18px;
-    display: block;
-    color : #818181;">{{ category.title }}</a>
+                <a href="">{{ category.title }}</a>
             {% endfor %}            
         </div>
         
